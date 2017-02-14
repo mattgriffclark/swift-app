@@ -3,7 +3,7 @@
 //  Swift App
 //
 //  Created by Matt Clark on 2/9/17.
-//  Copyright © 2017 Matt Clark. All rights reserved.
+//  Copyright © 2017 Matt Clark. All rights reserved..
 //
 
 import UIKit
@@ -12,15 +12,18 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var TheLabel: UILabel!
     
-    var tapCount = 0
+    @IBOutlet weak var text1: UITextField!
+    
+
+    @IBOutlet weak var text2: UITextField!
+    
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         
-        tapCount = tapCount + 1
         
-        if tapCount >= 10{
-            TheLabel.text = "You Tapped 10x!"
-        }
+        TheLabel.text = "Results: \(Double(text1.text!)! * Double(text2.text!)!)"
+        
+
     }
 
     
